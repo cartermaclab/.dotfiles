@@ -1,0 +1,17 @@
+/**
+* -----
+* rofi config
+* Mike Carter
+* -----
+*/
+
+configuration {
+    modi: "run,drun,window";
+    display-run: "Run:";
+    display-drun: "Applications:";
+    display-window: "Windows:";
+    show-icons: false;
+    font: "JetBrains Mono Regular 13";
+}
+
+@theme "nord"
