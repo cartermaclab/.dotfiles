@@ -14,4 +14,4 @@ configuration {
     font: "JetBrains Mono Regular 13";
 }
 
-@theme "nord"
+@theme "/dev/null"

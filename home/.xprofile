@@ -4,7 +4,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 
-picom &
+picom -b &
 nm-applet &
 pasystray &
 nitrogen --restore &
