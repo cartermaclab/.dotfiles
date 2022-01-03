@@ -130,8 +130,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'sans',
-    fontsize = 12,
+    font = 'JetBrains Mono',
+    fontsize = 13,
     padding = 3,
 )
 extension_defaults = widget_defaults.copy()
@@ -141,7 +141,9 @@ screens = [
         top = bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(
+                    disable_drag = True,
+                    ),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -150,24 +152,35 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                #widget.Mpris2(
-                #    name = 'spotify', # if using AUR package
+                widget.Mpris2(
+                    name = 'spotify', # if using AUR package
                     #name = 'com.spotify.Client', # if using flatpak
-                #    objname = "org.mpris.MediaPlayer2.spotify",
-                #    display_metadata = ['xesam:title', 'xesam:artist'],
-                #    scroll_chars = None,
-                #    #stop_pause_text='',
-                #    ),
+                    objname = "org.mpris.MediaPlayer2.spotify",
+                    display_metadata = ['xesam:title', 'xesam:artist'],
+                    scroll_chars = None,
+                    #stop_pause_text='',
+                    ),
                 widget.CheckUpdates(
                     distro = 'Arch_checkupdates', 
                     display_format = '{updates} Updates',
                     no_update_string = '0 Updates',
                     ),
+                widget.TextBox(
+                    text = '',
+                    ),
+                widget.PulseVolume(
+                    update_interval = 0.1,
+                    ),
+                widget.TextBox(
+                    text = ''
+                    ),
+                widget.Wlan(
+                    interface = 'wlp5s0',
+                    format = '{essid} {percent:2.0%}',
+                    ),
                 widget.Systray(),
                 widget.Clock(
-                    format='%a %b %d %Y %H:%M',
+                    format = '%a %b %d %Y %H:%M',
                     ),
                 #widget.QuickExit(),
             ],
