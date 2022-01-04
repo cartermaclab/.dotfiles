@@ -3,10 +3,11 @@
 # sourced at boot by ~/.xinitrc and most display managers
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
+export QT_QPA_PLATFORMTHEME='gnome'
 
 picom -b &
-nm-applet &
-pasystray &
+#nm-applet &
+#pasystray &
 nitrogen --restore &
 #xfce4-power-manager --daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
