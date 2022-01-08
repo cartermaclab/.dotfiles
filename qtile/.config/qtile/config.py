@@ -138,6 +138,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        wallpaper = "~/Pictures/wallpapers/3440x1440_wall-001.png",
+        #wallpaper_mode = "",
         top = bar.Bar(
             [
                 widget.CurrentLayout(),
