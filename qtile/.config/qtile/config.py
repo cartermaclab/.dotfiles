@@ -96,7 +96,7 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "123456"]
 
 for i in groups:
     keys.extend([
@@ -216,6 +216,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='ssh-askpass'),  # ssh-askpass
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
+    Match(wm_class = 'gpick'),
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
