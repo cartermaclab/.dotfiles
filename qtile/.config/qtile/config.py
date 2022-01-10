@@ -130,7 +130,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'monospace',
+    font = 'sans',
     fontsize = 13,
     padding = 3,
 )

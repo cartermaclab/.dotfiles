@@ -11,7 +11,7 @@ configuration {
     display-drun: "Applications:";
     display-window: "Windows:";
     show-icons: false;
-    font: "JetBrains Mono Regular 13";
+    font: "monospace 13";
 }
 
 @theme "/dev/null"
