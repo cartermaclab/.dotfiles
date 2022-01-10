@@ -16,7 +16,7 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 alt = "mod1"
 terminal = guess_terminal()
-gfm = "nautilus"
+gfm = "thunar"
 browser1 = "firefox"
 browser2 = "google-chrome-stable"
 
