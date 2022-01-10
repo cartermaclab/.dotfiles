@@ -130,7 +130,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'JetBrains Mono',
+    font = 'monospace',
     fontsize = 13,
     padding = 3,
 )
@@ -142,11 +142,12 @@ screens = [
         #wallpaper_mode = "",
         top = bar.Bar(
             [
-                widget.CurrentLayout(),
                 widget.GroupBox(
                     disable_drag = True,
                     ),
-                widget.Prompt(),
+                widget.CurrentLayoutIcon(
+                    scale = 0.75,
+                    ),
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
@@ -154,6 +155,10 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Clock(
+                    format = '%a %b %d %Y %H:%M',
+                    ),
+                widget.Spacer(),
                 widget.Mpris2(
                     name = 'spotify', # if using AUR package
                     #name = 'com.spotify.Client', # if using flatpak
@@ -181,10 +186,6 @@ screens = [
                     format = '{essid} {percent:2.0%}',
                     ),
                 widget.Systray(),
-                widget.Clock(
-                    format = '%a %b %d %Y %H:%M',
-                    ),
-                #widget.QuickExit(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
