@@ -1,0 +1,18 @@
+# -----
+# zathurarc
+# Mike Carter
+# -----
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set selection-clipboard clipboard
+set incremental-search true
+
+map p print
+map r rotate
+map R reload
+map K zoom in
+map J zoom out
+map D toggle_page_mode
+
