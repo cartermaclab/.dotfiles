@@ -155,10 +155,11 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.Clock(
-                    format = '%a %b %d %Y %H:%M',
+                widget.TextBox(
+                    text = '',
+                    fontsize = 18,
+                    foreground = '#215578',
                     ),
-                widget.Spacer(),
                 widget.Mpris2(
                     name = 'spotify', # if using AUR package
                     #name = 'com.spotify.Client', # if using flatpak
@@ -167,23 +168,36 @@ screens = [
                     scroll_chars = None,
                     #stop_pause_text='',
                     ),
+                widget.Spacer(),
+                widget.TextBox(
+                    text = '',
+                    fontsize = 22,
+                    foreground = '#215578',
+                    ),
                 widget.CheckUpdates(
                     distro = 'Arch_checkupdates', 
-                    display_format = '{updates} Updates',
-                    no_update_string = '0 Updates',
+                    display_format = '{updates}',
+                    no_update_string = '0',
                     ),
                 widget.TextBox(
                     text = '',
+                    fontsize = 22,
+                    foreground = '#215578',
                     ),
                 widget.PulseVolume(
                     update_interval = 0.1,
                     ),
                 widget.TextBox(
-                    text = ''
+                    text = '',
+                    fontsize = 22,
+                    foreground = '#215578',
                     ),
                 widget.Wlan(
                     interface = 'wlp5s0',
                     format = '{essid} {percent:2.0%}',
+                    ),
+                widget.Clock(
+                    format = '%a %b %d %Y %H:%M',
                     ),
                 widget.Systray(),
             ],
